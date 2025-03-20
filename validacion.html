@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de ID | Brigada Centinela</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/">
+          <span class="logo-text">Brigada Centinela</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/#servicios">Servicios</a></li>
+          <!-- <li><a href="#unidades">Unidades de Respuesta</a></li> -->
+          <!-- <li><a href="#nosotros">Nosotros</a></li> -->
+          <li><a href="/#equipo">Equipo</a></li>
+          <!-- <li><a href="#contacto">Contacto</a></li> -->
+          <li><a href="validacion.html" class="validate-btn">Validar ID</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="validation-hero">
+    <div class="container">
+      <h1>Validación de Credenciales</h1>
+      <p>Verifica la autenticidad de nuestro personal y vehículos operativos</p>
+    </div>
+  </section>
+
+  <section class="validation-container">
+    <div class="container">
+      <div class="validation-tabs">
+        <div class="tab-btn active" data-type="person">Personal Operativo</div>
+        <div class="tab-btn" data-type="vehicle">Vehículos</div>
+      </div>
+      
+      <div class="validation-form">
+        <form id="validationForm">
+          <div class="form-group">
+            <label for="id-input">Ingrese el ID a verificar</label>
+            <input type="text" id="id-input" name="id-input" placeholder="Ej. BC-001 o VEH-001" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Verificar</button>
+        </form>
+      </div>
+      
+      <div class="validation-result">
+        <!-- Person Result -->
+        <!-- <div class="person-result">
+          <div class="result-header">
+            <div class="result-image">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Carlos Mendoza">
+            </div>
+            <div class="result-info">
+              <h2>Carlos Mendoza</h2>
+              <p>Director de Operaciones</p>
+              <p>ID: BC-001</p>
+            </div>
+            <div class="result-status status-active">Activo</div>
+          </div>
+          
+          <div class="result-details">
+            <div class="detail-item">
+              <div class="detail-label">Formación Académica</div>
+              <div class="detail-value">Licenciatura en Protección Civil, Universidad Nacional Autónoma de México</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Certificaciones</div>
+              <div class="detail-value">
+                <ul>
+                  <li>Técnico en Urgencias Médicas (TUM-B)</li>
+                  <li>Certificación en Gestión de Emergencias</li>
+                  <li>Instructor en Primeros Auxilios</li>
+                </ul>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Experiencia</div>
+              <div class="detail-value">12 años en gestión de emergencias y protección civil</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Unidad Asignada</div>
+              <div class="detail-value">Unidad de Respuesta Rápida</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Fecha de Incorporación</div>
+              <div class="detail-value">15 de enero de 2018</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Vigencia de Credencial</div>
+              <div class="detail-value">31 de diciembre de 2023</div>
+            </div>
+          </div>
+        </div> -->
+        
+        <!-- Vehicle Result -->
+        <!-- <div class="vehicle-result" style="display: none;">
+          <div class="result-header">
+            <div class="result-info">
+              <h2>Unidad de Respuesta Rápida</h2>
+              <p>ID: VEH-001</p>
+              <p>Tipo: Camioneta de Intervención</p>
+            </div>
+            <div class="result-status status-active">En Servicio</div>
+          </div>
+          
+          <div class="vehicle-image">
+            <img src="https://images.unsplash.com/photo-1601059438248-33a8dbd18a04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Unidad de Respuesta Rápida">
+          </div>
+          
+          <div class="result-details vehicle-details">
+            <div class="detail-item">
+              <div class="detail-label">Marca y Modelo</div>
+              <div class="detail-value">Ford F-150 2022</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Placa</div>
+              <div class="detail-value">BC-URR-001</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Equipamiento</div>
+              <div class="detail-value">
+                <ul>
+                  <li>Equipo de primeros auxilios avanzado</li>
+                  <li>Herramientas de rescate</li>
+                  <li>Sistema de comunicación de emergencia</li>
+                </ul>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Última Revisión</div>
+              <div class="detail-value">15 de mayo de 2023</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Próxima Revisión</div>
+              <div class="detail-value">15 de noviembre de 2023</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Estatus</div>
+              <div class="detail-value">Operativo</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://brigadacentinela.org/src/images/BC-SELLO-NARANJA.png" alt="Brigada Centinela Logo" class="footer-logo-img">
+          <p>Gestión de Riesgos y Protección Civil</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="/#servicios">Servicios</a></li>
+              <!-- <li><a href="#unidades">Unidades de Respuesta</a></li> -->
+              <!-- <li><a href="#nosotros">Nosotros</a></li> -->
+              <li><a href="/#equipo">Equipo</a></li>
+              <!-- <li><a href="#contacto">Contacto</a></li> -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#">Evaluación de Riesgos</a></li>
+              <li><a href="#">Planes de Emergencia</a></li>
+              <li><a href="#">Capacitación</a></li>
+              <li><a href="#">Auditorías de Seguridad</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Aviso Legal</a></li>
+              <li><a href="validacion.html">Validación de ID</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Brigada Centinela. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/validacion.js"></script>
+</body>
+</html>
+
